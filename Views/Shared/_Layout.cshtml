@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="keywords" content="@ViewBag.Keywords">
+	<meta name="description" content="@ViewBag.Desc">
+	<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+	<link href="@ViewBag.Url/content/style.css" rel="stylesheet">
+	<title>@ViewBag.Title</title>
+</head>
+<body>
+	<div class="wrapper">
+			<header>
+				<div class="top-logo-row-wrapper-wrapper" style="/*position: relative;*/">
+					<div class="top-logo-row-wrapper">
+							<div class="top-logo-row full-site-width">
+								<div class="logo-wrapper">
+									<a href="@ViewBag.Url" class="site-logo-link">
+									<img src="@ViewBag.Url/content/img/simgenlogo.png" alt="杭州新景生物有限公司,LOGO" class="site-logo"/>
+									</a>
+								</div>
+							</div>
+					</div>
+				</div>
+				<div class="header-upper-tabs">
+					<nav id="nav" class="doc-set-nav nav overflow-tabs-scroll-wrapper">
+					  <ul class="doc-set-nav-tab-list overflow-tabs-scroll">
+					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">首页</a></li>
+					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">产品</a></li>
+					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">技术文档</a></li>
+					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">促销信息</a></li>
+						<li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">说明书下载</a></li>
+						<li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">销售网络</a></li>
+					  </ul>
+					</nav>
+				</div>
+			</header>
+	@RenderBody()
+	</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+/Users/sophie/Projects/simgen/frontend/simgen/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/sophie/Projects/simgen/frontend/simgen/bin/simgenfrontend.dll.mdb
+/Users/sophie/Projects/simgen/frontend/simgen/bin/simgenfrontend.dll
+/Users/sophie/Projects/simgen/frontend/simgen/obj/Debug/simgenfrontend.dll
+/Users/sophie/Projects/simgen/frontend/simgen/obj/Debug/simgenfrontend.dll.mdb
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Razor.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/Microsoft.Web.Infrastructure.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Helpers.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.WebPages.Deployment.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.WebPages.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.WebPages.Razor.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Mvc.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Net.Http.Formatting.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Http.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Http.WebHost.dll
+/Users/sophie/Projects/simgen/frontend/simgen/bin/Newtonsoft.Json.dll

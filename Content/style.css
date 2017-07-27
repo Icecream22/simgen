@@ -1,0 +1,138 @@
+﻿
+/*头部---begin*/
+.top-logo-row-wrapper-wrapper {
+    transform: none;
+    z-index: auto;
+    border-bottom: 0;
+    /*position: fixed;*/
+    top: 0;
+    transform: translateZ(0);
+    width: 100%;
+    z-index: 10006;
+}
+
+.--top-logo-row-wrapper::before {
+    background: #f7f7f7;
+    bottom: 0;
+    content: " ";
+    display: block;
+    height: 48px;
+    position: absolute;
+    width: 100vw;
+}
+
+.top-logo-row-wrapper {
+    background: #fff;
+}
+
+.top-logo-row {
+    display: -ms-flexbox;
+    display: flex;
+    height: 96px;
+    padding: 0 24px;
+    position: relative;
+}
+
+.full-site-width {
+    margin: 0 auto;
+    max-width: 1400px;
+}
+
+.logo-wrapper
+{
+	display: -ms-flexbox;
+    display: flex;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    height: 38px;
+    margin: 4px 0;
+}
+
+.site-logo {
+    height: 38px;
+    margin: 2px 0;
+}
+/*导航---begin*/
+
+/*
+.header-upper-tabs:not(:empty) {
+    margin-left: 0;
+    width: calc(100% - 275px);
+}
+
+.header-upper-tabs:not(:empty) {
+    margin-left: 48px;
+}
+*/
+
+.header-upper-tabs {
+    left: 0;
+    position: absolute;
+    top: 48px;
+}
+
+.header-upper-tabs {
+    display: inline-block;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+    overflow-y: auto;
+    vertical-align: top;
+    transition: flex .2s,margin .2s,width .2s;
+    transition: flex .2s,margin .2s,width .2s,-ms-flex .2s;
+}
+
+.overflow-tabs-scroll-wrapper {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+
+.doc-set-nav {
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+
+.doc-set-nav-tab-list 
+{
+    white-space: nowrap;
+}
+
+.doc-set-nav-tab-container
+{
+	display: inline-block;
+    margin: 0;
+}
+
+.nav {
+    font-size: 15px;
+}
+
+.nav ul 
+{
+    list-style-type: none;
+    padding: 0;
+}
+
+.header-upper-tabs .doc-set-nav-tab {
+    color: rgba(0,0,0,.54);
+    font-weight: 400;
+    text-transform: none;
+}
+
+.doc-set-nav-tab {
+    border-bottom: 2px solid transparent;
+    border-top: 2px solid transparent;
+    /*color: rgba(255,255,255,.7);*/
+    display: inline-block;
+    font: 500 14px/44px Roboto,sans-serif;
+    margin: 0;
+    padding: 0 24px;
+    text-transform: uppercase;
+    transition: color .2s;
+}
+
+
+/*导航---end*/
+
+/*头部---end*/

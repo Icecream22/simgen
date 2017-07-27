@@ -1,0 +1,103 @@
+gitLast login: Fri Jun  9 14:50:43 on ttys000
+sophiedembp:~ sophie$   ls
+Applications	Library		Projects	iosproject	welcome
+Desktop		Movies		Public		npm-debug.log
+Documents	Music		VirtualBox VMs	ssh
+Downloads	Pictures	haimi-prototype	vpn
+sophiedembp:~ sophie$ cd projects
+sophiedembp:projects sophie$ ls
+MallReport	TestJson	haimi		simgen
+sophiedembp:projects sophie$ cd/
+-bash: cd/: No such file or directory
+sophiedembp:projects sophie$ ls
+MallReport	TestJson	haimi		simgen
+sophiedembp:projects sophie$ cd simgen
+sophiedembp:simgen sophie$ cd simgen
+-bash: cd: simgen: No such file or directory
+sophiedembp:simgen sophie$ ls
+frontend	wwwsimgencn
+sophiedembp:simgen sophie$  frontend
+-bash: frontend: command not found
+sophiedembp:simgen sophie$ cd frontend
+sophiedembp:frontend sophie$ git clone https://github.com/Icecream22/simgen.git
+Cloning into 'simgen'...
+warning: You appear to have cloned an empty repository.
+Checking connectivity... done.
+sophiedembp:frontend sophie$ git pull
+fatal: Not a git repository (or any of the parent directories): .git
+sophiedembp:frontend sophie$ git cd simgen
+git: 'cd' is not a git command. See 'git --help'.
+
+Did you mean one of these?
+	ca
+	cm
+sophiedembp:frontend sophie$ ls
+simgen
+sophiedembp:frontend sophie$ cd dimgen
+-bash: cd: dimgen: No such file or directory
+sophiedembp:frontend sophie$ cd simgen
+sophiedembp:simgen sophie$ git pull
+Your configuration specifies to merge with the ref 'refs/heads/master'
+from the remote, but no such ref was fetched.
+sophiedembp:simgen sophie$ git branch
+sophiedembp:simgen sophie$ git pull
+Your configuration specifies to merge with the ref 'refs/heads/master'
+from the remote, but no such ref was fetched.
+sophiedembp:simgen sophie$ git branch master
+fatal: Not a valid object name: 'master'.
+sophiedembp:simgen sophie$ git pull origin master
+fatal: Couldn't find remote ref master
+sophiedembp:simgen sophie$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+sophiedembp:simgen sophie$ git add .
+sophiedembp:simgen sophie$ git commit -m "test"
+[master (root-commit) 6e7aad0] test
+ 1 file changed, 5 insertions(+)
+ create mode 100644 jquery.min.js
+sophiedembp:simgen sophie$ git push
+Username for 'https://github.com': zzf82018@gmail.com
+Password for 'https://zzf82018@gmail.com@github.com': 
+remote: Permission to Icecream22/simgen.git denied to iamsophie.
+fatal: unable to access 'https://github.com/Icecream22/simgen.git/': The requested URL returned error: 403
+sophiedembp:simgen sophie$ git commit -m "test"
+On branch master
+Your branch is based on 'origin/master', but the upstream is gone.
+  (use "git branch --unset-upstream" to fixup)
+nothing to commit, working directory clean
+sophiedembp:simgen sophie$ git push
+Username for 'https://github.com': 851334001@qq.com
+Password for 'https://851334001@qq.com@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 32.72 KiB | 0 bytes/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Icecream22/simgen.git
+ * [new branch]      master -> master
+sophiedembp:simgen sophie$ git push
+Everything up-to-date
+sophiedembp:simgen sophie$ git pull
+remote: Counting objects: 20, done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 20 (delta 5), reused 20 (delta 5), pack-reused 0
+Unpacking objects: 100% (20/20), done.
+From https://github.com/Icecream22/simgen
+   6e7aad0..c11ede1  master     -> origin/master
+Updating 6e7aad0..c11ede1
+Fast-forward
+ HESUAN2.html | 242 ++++++++++++++++++++++++++++++++++++
+ hesuan.css   | 398 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 2 files changed, 640 insertions(+)
+ create mode 100644 HESUAN2.html
+ create mode 100644 hesuan.css
+sophiedembp:simgen sophie$ 
+  [恢复于 2017年7月21日 上午10:35:05]
+Last login: Fri Jul 21 10:34:54 on console
+sophiedeMacBook-Pro:simgen sophie$ 
+  [恢复于 2017年7月21日 下午3:17:43]
+Last login: Fri Jul 21 10:35:05 on ttys000
+Restored session: 2017年 7月21日 星期五 15时17分41秒 CST
+sophiedeMacBook-Pro:simgen sophie$ git pull
+Already up-to-date.
+sophiedeMacBook-Pro:simgen sophie$ 
