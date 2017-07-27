@@ -14,3 +14,4 @@
 /Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Http.dll
 /Users/sophie/Projects/simgen/frontend/simgen/bin/System.Web.Http.WebHost.dll
 /Users/sophie/Projects/simgen/frontend/simgen/bin/Newtonsoft.Json.dll
+/Users/sophie/Projects/simgen/frontend/simgen/obj/Debug/.NETFramework,Version=v4.5.1.AssemblyAttribute.cs
