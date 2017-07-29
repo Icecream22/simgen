@@ -1,0 +1,11 @@
+﻿# Windows:
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# CSharp:
+*.dll
+*.csproj
+*.sln
+*.mdb
+*.config
