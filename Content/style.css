@@ -1,138 +1,104 @@
-﻿
-/*头部---begin*/
-.top-logo-row-wrapper-wrapper {
-    transform: none;
-    z-index: auto;
-    border-bottom: 0;
-    /*position: fixed;*/
-    top: 0;
-    transform: translateZ(0);
-    width: 100%;
-    z-index: 10006;
+﻿/*tongyong begin*/
+* {
+	padding: 0;
+	margin: 0;
 }
-
-.--top-logo-row-wrapper::before {
-    background: #f7f7f7;
-    bottom: 0;
-    content: " ";
-    display: block;
-    height: 48px;
-    position: absolute;
-    width: 100vw;
+li {
+	list-style: none;	
 }
-
-.top-logo-row-wrapper {
-    background: #fff;
+a {
+	color: #000;
+	text-decoration: none;
 }
-
-.top-logo-row {
-    display: -ms-flexbox;
-    display: flex;
-    height: 96px;
-    padding: 0 24px;
-    position: relative;
+.clearfix:after {
+	display: block;
+	content: "";
+	clear: both;
 }
-
-.full-site-width {
-    margin: 0 auto;
-    max-width: 1400px;
+/*tongyong end*/
+/*header begin*/
+header{
+	width: 100%;
+	height: auto;/*to think*/
+	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
-
-.logo-wrapper
-{
-	display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 0 0 auto;
-    flex: 0 0 auto;
-    height: 38px;
-    margin: 4px 0;
+header .top-logo-row-wrapper {
+	width: inherit;
+	height: 40px;
 }
-
-.site-logo {
-    height: 38px;
-    margin: 2px 0;
+header .top-logo-row-wrapper .top-logo-row {
+	width: 1352px;/*zi shi ying yaogai*/
+	padding: 0 24px;
+	height: inherit;/*height to change*/
+	margin: 0 auto;
 }
-/*导航---begin*/
-
-/*
-.header-upper-tabs:not(:empty) {
-    margin-left: 0;
-    width: calc(100% - 275px);
+header .header-upper-tabs {
+	width: inherit;
+	height: 48px;
+	background: #f2f2f2;
 }
-
-.header-upper-tabs:not(:empty) {
-    margin-left: 48px;
+header .header-upper-tabs .doc-set-nav {
+	position: relative;
+	width: 1400px;/*zi shi ying yaogai*/
+	height: inherit;/*height to change*/
+	margin: 0 auto;
 }
-*/
-
-.header-upper-tabs {
-    left: 0;
-    position: absolute;
-    top: 48px;
-}
-
-.header-upper-tabs {
-    display: inline-block;
-    -ms-flex: 1 1 0px;
-    flex: 1 1 0;
-    overflow-y: auto;
-    vertical-align: top;
-    transition: flex .2s,margin .2s,width .2s;
-    transition: flex .2s,margin .2s,width .2s,-ms-flex .2s;
-}
-
-.overflow-tabs-scroll-wrapper {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-}
-
-
-.doc-set-nav {
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto;
-}
-
-.doc-set-nav-tab-list 
-{
-    white-space: nowrap;
-}
-
-.doc-set-nav-tab-container
-{
+header .doc-set-nav-tab-list {
 	display: inline-block;
-    margin: 0;
+	width: 1125px;
+	height: inherit;
+	
 }
-
-.nav {
-    font-size: 15px;
+header .doc-set-nav-tab-list .doc-set-nav-tab-container {
+	float: left;
+	padding: 0 55px;
+	height: 48px;
+	line-height: 48px;
 }
+	
+header .doc-set-nav-tab-container .doc-set-nav-tab {
+	color: rgba(0,0,0,.54);
 
-.nav ul 
-{
-    list-style-type: none;
-    padding: 0;
 }
-
-.header-upper-tabs .doc-set-nav-tab {
-    color: rgba(0,0,0,.54);
-    font-weight: 400;
-    text-transform: none;
+header .doc-set-nav-tab-container .doc-set-nav-tab:hover {
+	color: #000;
 }
-
-.doc-set-nav-tab {
-    border-bottom: 2px solid transparent;
-    border-top: 2px solid transparent;
-    /*color: rgba(255,255,255,.7);*/
-    display: inline-block;
-    font: 500 14px/44px Roboto,sans-serif;
-    margin: 0;
-    padding: 0 24px;
-    text-transform: uppercase;
-    transition: color .2s;
+header .header-button-wrapper {
+	position: absolute;
+	left: 0;
+	top: 0;
+	top: 50%;
+	margin-top: -18px;
+	display: inline-block;
+	height:36px;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+	background: #ddd;
+	border-radius: 2px;
+	cursor: pointer;
 }
-
-
-/*导航---end*/
-
-/*头部---end*/
+header .free-trail-wrapper {
+	left: 1125px;
+	
+}
+header .contacy-sales-wrapper {
+	left: 1245px;
+}
+header .header-button {
+	position: relative;
+	height: 36px;
+	padding: 8px 16px;
+	border: 0 none;
+	outline: none;
+	border-radius: 2px;
+	cursor: pointer;
+}
+header .header-button:hover {
+	bottom: 3px;
+}
+header .free-trail-button {
+	background: #2196f3;
+}	
+header .contact-sales-button {
+	background: #fff;
+}
+/*header end*/
