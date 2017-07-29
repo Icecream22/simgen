@@ -1,4 +1,4 @@
-﻿/*tongyong begin*/
+﻿/*通用 begin*/
 * {
 	padding: 0;
 	margin: 0;
@@ -10,95 +10,239 @@ a {
 	color: #000;
 	text-decoration: none;
 }
+img { 
+    max-width: 100%;
+}
 .clearfix:after {
 	display: block;
 	content: "";
 	clear: both;
 }
-/*tongyong end*/
+/*通用 end*/
+body {
+    background: #f2f2f2;
+}
 /*header begin*/
 header{
 	width: 100%;
-	height: auto;/*to think*/
+	height: 136px;/*to think*/
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
 }
 header .top-logo-row-wrapper {
-	width: inherit;
-	height: 40px;
+    width: inherit;
+    height: 85px;
+    background: #fff;
 }
 header .top-logo-row-wrapper .top-logo-row {
-	width: 1352px;/*zi shi ying yaogai*/
-	padding: 0 24px;
-	height: inherit;/*height to change*/
-	margin: 0 auto;
+    position: relative;
+    width: 1280px;/*need change，固定为1320px*/
+    height: inherit;
+    margin: 0 auto;
+}
+header .top-logo-row .logo-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    margin-top: -19px;
+    width: 155px;
+    height: 38px;  
 }
 header .header-upper-tabs {
-	width: inherit;
-	height: 48px;
-	background: #f2f2f2;
+    width: inherit;
+    height: 48px;
+    background: #f2f2f2;
 }
 header .header-upper-tabs .doc-set-nav {
-	position: relative;
-	width: 1400px;/*zi shi ying yaogai*/
-	height: inherit;/*height to change*/
-	margin: 0 auto;
+    position: relative;
+    width: 1280px;/*zi shi ying yaogai*/
+    height: inherit;/*height to change*/
+    margin: 0 auto;
 }
 header .doc-set-nav-tab-list {
-	display: inline-block;
-	width: 1125px;
-	height: inherit;
-	
+    display: inline-block;
+    width: 1065px;/*to change*/
+    height: inherit;
+    font-size: 14px;
 }
 header .doc-set-nav-tab-list .doc-set-nav-tab-container {
-	float: left;
-	padding: 0 55px;
-	height: 48px;
-	line-height: 48px;
+    float: left;
+    padding: 0 48px;
+    height: 48px;
+    line-height: 48px;
 }
-	
+header .doc-set-nav-tab-list .doc-set-nav-tab-home {
+    padding: 0 48px 0 20px;
+}    
 header .doc-set-nav-tab-container .doc-set-nav-tab {
-	color: rgba(0,0,0,.54);
+    color: rgba(0,0,0,.54);
 
 }
 header .doc-set-nav-tab-container .doc-set-nav-tab:hover {
-	color: #000;
-}
-header .header-button-wrapper {
-	position: absolute;
-	left: 0;
-	top: 0;
-	top: 50%;
-	margin-top: -18px;
-	display: inline-block;
-	height:36px;
-	box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
-	background: #ddd;
-	border-radius: 2px;
-	cursor: pointer;
+    color: #000;
 }
 header .free-trail-wrapper {
-	left: 1125px;
-	
-}
-header .contacy-sales-wrapper {
-	left: 1245px;
-}
-header .header-button {
-	position: relative;
-	height: 36px;
-	padding: 8px 16px;
-	border: 0 none;
-	outline: none;
-	border-radius: 2px;
-	cursor: pointer;
-}
-header .header-button:hover {
-	bottom: 3px;
+    position: absolute;
+    right: 40px;
+    top: 50%;
+    margin-top: -18px;
+    display: inline-block;
+    height:36px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+    background: #ddd;
+    border-radius: 2px;
+    cursor: pointer;
 }
 header .free-trail-button {
-	background: #2196f3;
-}	
-header .contact-sales-button {
-	background: #fff;
+    height: 36px;
+    padding: 10px 20px;
+    border: 0 none;
+    outline: none;
+    border-radius: 2px;
+    cursor: pointer;
+    background: #2196f3;
+    color: #fff;
+}
+header .free-trail-button:hover {
+    bottom: 3px;
 }
 /*header end*/
+/*section 轮播图start*/
+#carousel-wrapper{
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin: 0 auto 0;
+}
+#carousel-wrapper .carousel-list-wrapper{
+    position: relative;
+    width: inherit;
+    height: 430px;
+}
+#carousel-wrapper .carousel-list-wrapper #carousel-list li{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    list-style: none;
+    filter: alpha(opacity=0);
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+#carousel-wrapper .carousel-list-wrapper #carousel-list li.on{
+    opacity: 1;
+    filter: alpha(opacity=100);
+}
+#carousel-wrapper .carousel-list-wrapper #carousel-list li h2 {
+    position: absolute;
+    width: 270px;
+    top: 20%;
+    left: 50%;
+    margin-left: -135px;
+}
+#carousel-wrapper #carousel-list li p {
+    position: absolute;
+    width: 220px;
+    font: 14px "Microsoft Yahei";
+    top: 40%;
+    left: 50%;
+    margin-left: -110px;
+}
+#carousel-wrapper #carousel-list li a{
+    position: absolute;
+    display: inline-block;
+    width: 80px;
+    height: 35px;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 14px;
+    text-align: center;
+    color: #fff;
+    border: 1px solid #fff;
+}
+#carousel-wrapper #carousel-list li #learnMore {
+    top: 70%;
+    left: 40%;
+}
+#carousel-wrapper #carousel-list li #useFree {
+    top: 70%;
+    left: 50%;
+}
+#carousel-wrapper .carousel-list-wrapper #carousel-list li img{
+    width: 100%;
+    height: 100%;
+}
+#carousel-wrapper .tab{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -45px;
+    width: 90px;
+    height: 20px;
+    background: #999;
+    background: rgba(255,255,255,.5);
+    border-radius: 10px;
+}
+#carousel-wrapper .tab ul li{
+    list-style: none;
+    float: left;
+    width: 14px;
+    height: 14px;
+    background: rgba(0,0,0,.28);
+    margin: 3px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+#carousel-wrapper .tab ul li.on{
+    background: #2196f3;
+}
+/*section 轮播图end*/
+
+/*section character start*/
+#character-wrapper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+}
+#character-wrapper .character-list-wrapper {
+    width: 1260px;
+    height: inherit;
+    margin: 0 auto;    
+}
+#character-wrapper ul {
+    position: absolute;
+    top: 50%;
+    margin-top: -60px;
+    width: inherit;
+    height: 120px;
+}
+#character-wrapper ul li {
+    position: relative;
+    width: 255px;
+    height: 100%;
+    list-style: none;
+    float: left;
+    margin-right: 77px;
+    border: 1px solid #000;
+}
+#character-wrapper ul li img {
+    position: absolute;
+    top: 50%;
+    margin-top: -25px;
+    left: 10%;
+    width: 55px;
+    height: 55px;
+}
+#character-wrapper ul li h3 {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    font-size: 14px;
+}
+#character-wrapper ul li p {
+    position: absolute;
+    left: 40%;
+    top: 40%;
+    font-size: 13px;
+}
+/*section character end*/
