@@ -5,38 +5,145 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="@ViewBag.Keywords">
 	<meta name="description" content="@ViewBag.Desc">
-	<link href="https://cdn.bootcss.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
-	<link href="@ViewBag.Url/content/style.css" rel="stylesheet">
 	<title>@ViewBag.Title</title>
+	<script src="//code.jquery.com/jquery-latest.min.js"></script>
+	<script src="//unslider.com/unslider.js"></script>
+	<style>
+		/*tongyong begin*/
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			list-style: none;	
+		}
+		a {
+			color: #000;
+			text-decoration: none;
+		}
+		.clearfix:after {
+			display: block;
+			content: "";
+			clear: both;
+		}
+		/*tongyong end*/
+		/*header begin*/
+		header{
+			width: 100%;
+			height: auto;/*to think*/
+			box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+		}
+		header .top-logo-row-wrapper {
+			width: inherit;
+			height: 40px;
+		}
+		header .top-logo-row-wrapper .top-logo-row {
+			width: 1352px;/*zi shi ying yaogai*/
+			padding: 0 24px;
+			height: inherit;/*height to change*/
+			margin: 0 auto;
+		}
+		header .header-upper-tabs {
+			width: inherit;
+			height: 48px;
+			background: #f2f2f2;
+		}
+		header .header-upper-tabs .doc-set-nav {
+			position: relative;
+			width: 1400px;/*zi shi ying yaogai*/
+			height: inherit;/*height to change*/
+			margin: 0 auto;
+		}
+		header .doc-set-nav-tab-list {
+			display: inline-block;
+			width: 1125px;
+			height: inherit;
+			
+		}
+		header .doc-set-nav-tab-list .doc-set-nav-tab-container {
+			float: left;
+			padding: 0 55px;
+			height: 48px;
+			line-height: 48px;
+		}
+			
+		header .doc-set-nav-tab-container .doc-set-nav-tab {
+			color: rgba(0,0,0,.54);
+
+		}
+		header .doc-set-nav-tab-container .doc-set-nav-tab:hover {
+			color: #000;
+		}
+		header .header-button-wrapper {
+			position: absolute;
+			left: 0;
+			top: 0;
+			top: 50%;
+			margin-top: -18px;
+			display: inline-block;
+			height:36px;
+			box-shadow: 0 2px 5px 0 rgba(0,0,0,.26);
+			background: #ddd;
+			border-radius: 2px;
+			cursor: pointer;
+		}
+		header .free-trail-wrapper {
+			left: 1125px;
+			
+		}
+		header .contacy-sales-wrapper {
+			left: 1245px;
+		}
+		header .header-button {
+			position: relative;
+			height: 36px;
+			padding: 8px 16px;
+			border: 0 none;
+			outline: none;
+			border-radius: 2px;
+			cursor: pointer;
+		}
+		header .header-button:hover {
+			bottom: 3px;
+		}
+		header .free-trail-button {
+			background: #2196f3;
+		}	
+		header .contact-sales-button {
+			background: #fff;
+		}
+		/*header end*/
+	</style>
 </head>
 <body>
 	<div class="wrapper">
-			<header>
-				<div class="top-logo-row-wrapper-wrapper" style="/*position: relative;*/">
-					<div class="top-logo-row-wrapper">
-							<div class="top-logo-row full-site-width">
-								<div class="logo-wrapper">
-									<a href="@ViewBag.Url" class="site-logo-link">
-									<img src="@ViewBag.Url/content/img/simgenlogo.png" alt="杭州新景生物有限公司,LOGO" class="site-logo"/>
-									</a>
-								</div>
-							</div>
+		<header>
+			<div class="top-logo-row-wrapper">
+					<div class="top-logo-row">
+						<div class="logo-wrapper">
+							<a href="@ViewBag.Url" class="site-logo-link">
+								<img src="@ViewBag.Url/content/img/simgenlogo.png" alt="杭州新景生物有限公司,LOGO" class="site-logo"/>
+							</a>
+						</div>
 					</div>
-				</div>
-				<div class="header-upper-tabs">
-					<nav id="nav" class="doc-set-nav nav overflow-tabs-scroll-wrapper">
-					  <ul class="doc-set-nav-tab-list overflow-tabs-scroll">
-					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">首页</a></li>
-					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">产品</a></li>
-					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">技术文档</a></li>
-					    <li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">促销信息</a></li>
-						<li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">说明书下载</a></li>
-						<li class="doc-set-nav-tab-container"><a href="#" class="doc-set-nav-tab">销售网络</a></li>
+			</div>
+			<div class="header-upper-tabs">
+				<nav id="nav" class="doc-set-nav">
+					  <ul class="doc-set-nav-tab-list clearfix">
+					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">首页</a></li>
+					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">产品</a></li>
+					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">技术文档</a></li>
+					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">促销信息</a></li>
+						<li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">说明书下载</a></li>
+						<li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">销售网络</a></li>
 					  </ul>
-					</nav>
-				</div>
-			</header>
-	@RenderBody()
+					  <a class="header-button-wrapper free-trail-wrapper"><button class="free-trail-button header-button">TRY IT FREE</button></a>
+					  <a class="header-button-wrapper contacy-sales-wrapper"><button class="contact-sales-button header-button">CONTACT SALES</button></a>
+				</nav>
+			</div>
+		</header>
+
 	</div>
+	@RenderBody()
 </body>
 </html>
