@@ -5,39 +5,42 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 	<meta name="keywords" content="@ViewBag.Keywords">
 	<meta name="description" content="@ViewBag.Desc">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>@ViewBag.Title</title>
-	<link href="@ViewBag.Url/content/style.css?v=1.4.9" rel="stylesheet">
+	<link href="@ViewBag.Url/content/style.css?v=1.4.14" rel="stylesheet">
 	<link rel="shortcut icon" href="@ViewBag.Url/content/img/favicon.ico">
 	<link rel="Bookmark" href="@ViewBag.Url/content/img/favicon.ico" >
 	<link rel="apple-touch-icon" href="@ViewBag.Url/content/img/apple-ico.png">
 </head>
 <body>
 	<div class="wrapper">
-		<header>
-			<div class="top-logo-row-wrapper">
-					<div class="top-logo-row">
-						<div class="logo-wrapper">
-							<a href="@ViewBag.Url" class="site-logo-link">
-								<img src="@ViewBag.Url/content/img/simgenlogo.png" alt="杭州新景生物有限公司,LOGO" class="site-logo"/>
-							</a>
-						</div>
-					</div>
-			</div>
-			<div class="header-upper-tabs">
-				<nav id="nav" class="doc-set-nav">
-					  <ul class="doc-set-nav-tab-list clearfix">
-					    <li class="doc-set-nav-tab-container doc-set-nav-tab-home"><a href="" class="doc-set-nav-tab">首页</a></li>
-					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">产品</a></li>
-					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">技术文档</a></li>
-					    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">促销信息</a></li>
-						<li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">说明书下载</a></li>
-						<li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">销售网络</a></li>
-					  </ul>
-					  <a class="free-trail-wrapper"><button class="free-trail-button">免费试用</button></a>
-				</nav>
-			</div>
-		</header>
+    <header>
+        <div class="top-logo-row-wrapper">
+                <div class="top-logo-row">
+                    <div class="logo-wrapper">
+                        <a href="@ViewBag.Url" class="site-logo-link">
+                            <img src="@ViewBag.Url/content/img/simgenlogo.png" alt="杭州新景生物有限公司,LOGO" class="site-logo"/>
+                        </a>
+                    </div>
+                    <form class="top-search-wrapper">
+                        <input type="text" placholder="搜索" />
+                    </form>
+                </div> 
+        </div>
+        <div class="header-upper-tabs">
+            <nav id="nav" class="doc-set-nav">
+                  <ul class="doc-set-nav-tab-list clearfix">
+                    <li class="doc-set-nav-tab-container doc-set-nav-tab-home"><a href="" class="doc-set-nav-tab">首页</a></li>
+                    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">产品</a></li>
+                    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">技术文档</a></li>
+                    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">促销信息</a></li>
+                    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">说明书下载</a></li>
+                    <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">销售网络</a></li>
+                  </ul>
+                  <a class="free-trail-button">免费试用</a>
+            </nav>
+        </div>
+    </header>
 
   
 
