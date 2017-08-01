@@ -129,13 +129,14 @@ header .free-trail-button:hover {
 /*section 轮播图start*/
 #carousel-wrapper{
     width: 100%;
-    height: 510px;
+    height: 400px;
     /*background: orange;*/
 }
 #carousel-wrapper .carousel-list-wrapper{
     height: inherit;
-    /*background: pink;*/
-    max-width: 1400px;
+    /*background: pink;
+    max-width: 1400px;*/
+    width: inherit;
     margin: 0 auto;
 }
 #carousel-wrapper .carousel-list-wrapper #carousel-list {
@@ -154,7 +155,7 @@ header .free-trail-button:hover {
     width: 100%;
     height: 100%;
     color: #fff;
-    background: url("/content/img/banner-dna-4.jpg") no-repeat center/cover;
+    background: url("/content/img/banner-dna-4.jpg") no-repeat center top; /*alipay.jpeg*/
     background-size: 100% 100%;
 }
 #carousel-wrapper .carousel-list-wrapper #carousel-list li.on{
@@ -163,14 +164,14 @@ header .free-trail-button:hover {
 }
 #carousel-wrapper #carousel-list li h2 {
     position: relative;
-    margin: 9% 30% 0;
+    margin: 3% 35% 0;
     font-size: 37px;
     font-size: 3.7rem;
     letter-spacing: 5px;
 }
 #carousel-wrapper #carousel-list li p {
     position: relative;
-    margin: 5% 40% 0;
+    margin: 3% 40% 0;
     font-size: 20px;
     font-size: 2rem;
     /*letter-spacing: .03em;*/
