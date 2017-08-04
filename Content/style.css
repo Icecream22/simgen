@@ -47,8 +47,9 @@ header .top-logo-row-wrapper .top-logo-row {
     height: inherit;
     margin: 0 auto;
     /*background: yellow;*/
-    padding: 0 24px;
-    max-width: 1352px;
+    /*padding: 0 24px;
+    max-width: 1352px;*/
+    max-width: 1400px;
 }
 header .top-logo-row .logo-wrapper {
     width: 155px;
@@ -72,15 +73,16 @@ header .top-search-wrapper {   /*待补充*/
 header .header-upper-tabs {
     width: inherit;
     height: 48px;
-    background: #f2f2f2;/**/
+    background: #f2f2f2;
 }
 header .header-upper-tabs .doc-set-nav {
     position: relative;
     height: inherit;
     margin: 0 auto;
     /*background: orange;*/
-    padding: 0 24px;
-    max-width: 1352px;
+    /*padding: 0 24px;
+    max-width: 1352px;*/
+    max-width: 1400px;
 }
 header .doc-set-nav-tab-list {
     float: left;
@@ -232,32 +234,101 @@ header .free-trail-button:hover {
 }
 /*section 轮播图end*/
 
+/*section newsBanner-wrapper begin*/
+.notice-wrapper {
+    width:100%;
+    height:84px;
+}
+.notice-wrapper .noticeBox {
+    position: relative;
+    height: inherit;
+    margin: 0 auto;
+    /*padding: 0 24px;
+    max-width: 1352px;*/
+    max-width: 1400px;
+}
+.notice-wrapper .notice-tit {
+    float: left;
+    display: inline-block;
+    margin: 28px 0;
+    padding: 4px 6px;
+    background: #fa991b;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font: 1.4rem;
+    border-radius: 2px;
+
+}
+.notice-wrapper .notice-list {
+    float: right;
+    height: 24px;
+    margin: 29px 0;
+    /*应该加个最小宽度,防止他掉下去，暂时未加*/
+}
+.notice-wrapper .notice-list .notice-item {
+    float:left;
+    margin-right: 45px;
+    font-size: 14px;
+    line-height: 24px;
+    
+}
+.notice-wrapper .notice-item .notice-item-a {
+    color: #1A1A1A;
+}
+.notice-wrapper .notice-item-a span {
+    color: #9A9A9A;
+}
+.notice-wrapper .notice-item .new{
+    color: #fff;
+    font-size: 10px;
+    font-size: 1rem;
+    padding: 0 1px;
+    background: #e04646;
+}
+.notice-wrapper .notice-list .notice-item-more {
+    float: left;
+    margin-left: 110px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 24px;
+}
+.notice-wrapper .notice-item-more  .notice-item-amore{
+    color: #9A9A9A;
+}
+/*section newsBanner-wrapper end*/
+
 /*section character start*/
 #character-wrapper {
     position: relative;
     width: 100%;
     height: 200px;
-    /*background: yellow;*/
+    background: #ddd;
 }
 #character-wrapper .character-list-wrapper {
     height: inherit;
     margin: 0 auto;
-    max-width: 1400px;  
-    /*background: orange;*/
+    max-width: 1400px;
 }
 #character-wrapper ul {
     width: inherit;
-    height: inherit;
-    /*background:green;*/
+    height: inherit;  
+    /*background: orange;*/
 }
-/*#character-wrapper ul li {
+#character-wrapper ul li {
     position: relative;
-    width: 255px;
-    height: 100%;
-    list-style: none;
     float: left;
-    margin-right: 77px;
-    border: 1px solid #000;
+    list-style: none;
+    border: 1px solid #bbb;
+    font-size: 10px;
+    font-size: 1rem;
+    width: 185px;
+    height: 198px;/*2px 的边框*/
+    padding: 0 20px;
+    margin-right: 125px;
+}
+#character-wrapper ul .charaLast {
+    margin-right: 0;
 }
 #character-wrapper ul li img {
     position: absolute;
