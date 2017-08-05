@@ -303,7 +303,6 @@ header .free-trail-button:hover {
     position: relative;
     width: 100%;
     height: 200px;
-    background: #ddd;
 }
 #character-wrapper .character-list-wrapper {
     height: inherit;
