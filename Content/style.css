@@ -237,7 +237,8 @@ header .free-trail-button:hover {
 /*section newsBanner-wrapper begin*/
 .notice-wrapper {
     width:100%;
-    height:84px;
+    height:77px;
+    background: pink;
 }
 .notice-wrapper .noticeBox {
     position: relative;
@@ -246,11 +247,12 @@ header .free-trail-button:hover {
     /*padding: 0 24px;
     max-width: 1352px;*/
     max-width: 1400px;
+    background:  yellow;
 }
 .notice-wrapper .notice-tit {
     float: left;
     display: inline-block;
-    margin: 28px 0;
+    margin: 23px 28px 23px 0;
     padding: 4px 6px;
     background: #fa991b;
     color: #fff;
@@ -261,42 +263,72 @@ header .free-trail-button:hover {
 
 }
 .notice-wrapper .notice-list {
-    float: right;
+    float: left;
+    /*max-width: 1300px;
+    width: 1300px;*/
+    width: 92%;
     height: 24px;
-    margin: 29px 0;
+    margin: 25px 0;
+    background: green;
     /*应该加个最小宽度,防止他掉下去，暂时未加*/
 }
 .notice-wrapper .notice-list .notice-item {
     float:left;
-    margin-right: 45px;
-    font-size: 14px;
+    max-width: 280px;
+    margin-right: 47px;
+    background: pink;
+    overflow: hidden;
+    height: inherit;
     line-height: 24px;
-    
 }
 .notice-wrapper .notice-item .notice-item-a {
+    display: inline-block;
+    max-width: 240px;
     color: #1A1A1A;
+    font-size: 14px;
+    font-size: 1.4rem;
+    background: orange;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: inherit;
 }
 .notice-wrapper .notice-item-a span {
     color: #9A9A9A;
 }
 .notice-wrapper .notice-item .new{
+    position: relative;
+    right: 0;
+    top: -11px;
+    display: inline-block;
+    -ms-transform: scale(.8, .8);
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
     color: #fff;
     font-size: 10px;
     font-size: 1rem;
-    padding: 0 1px;
-    background: #e04646;
+    background-color: #e04646;
+    border-radius: 2px;
+    line-height: 1;
+    padding: 1px 3px 3px;
 }
-.notice-wrapper .notice-list .notice-item-more {
-    float: left;
-    margin-left: 110px;
+.notice-wrapper .notice-list .notice-item-more {/*阿西吧有问题再说*/
+    float: right;
     font-size: 14px;
     font-size: 1.4rem;
+    height: inherit;
     line-height: 24px;
+    background: pink;
 }
 .notice-wrapper .notice-item-more  .notice-item-amore{
     color: #9A9A9A;
+    background: violet;
+    height: inherit;
 }
-/*section newsBanner-wrapper end*/
+/*/*section newsBanner-wrapper end*/
 
 /*section character start*/
 #character-wrapper {
@@ -353,3 +385,245 @@ header .free-trail-button:hover {
 }
 
 /*section character end*/
+/*section advantage start*/
+.advantage-wrapper {
+    width: 100%;
+    height: 377px;
+    /*background: violet;*/
+}
+.advantage-wrapper .advantageBox {
+    max-width: 1400px;
+    height: inherit;
+    /*background: green;*/
+    margin: 0 auto;
+}
+.advantage-wrapper .adv-tit {
+    margin:0 auto;
+    /*background: orange;*/
+    text-align: center;
+    font-size: 35px;
+    font-size: 3.5rem;
+    color: #008b4a;
+    font-weight: normal;
+    padding: 40px 0;
+}
+.advantage-wrapper .adv-list {
+    width: 100%;
+    max-width: 1400px;
+    /*background: yellow;*/
+    height: 250px;
+}
+.advantage-wrapper .adv-list .adv-item {
+    float: left;
+    max-width: 350px;
+    width: 25%;
+    /*background: pink;*/
+    height: inherit;
+    text-align: center;
+}
+.advantage-wrapper .adv-item img{
+    width: 120px;
+    height: 120px;
+}
+.advantage-wrapper .adv-item h6 {
+    margin: 30px 0;
+}
+.advantage-wrapper .adv-item p {
+    max-width: 330px;
+    margin: 0 auto;
+    /*background: yellow;*/
+}
+/*section advantage end*/
+/*section sample start*/
+.sample-wrapper {
+    width: 100%;
+    height: 550px;
+    background: #fff;
+    /*background: yellow;*/
+}
+.sample-wrapper .sampleBox {
+    max-width: 1400px;
+    height: inherit;
+    /*background: pink;*/
+    margin: 0 auto;
+    text-align: center;
+}
+.sample-wrapper .sampleBox .sample-tit {
+    margin:0 auto;
+    /*background: orange;*/
+    font-size: 35px;
+    font-size: 3.5rem;
+    color: #008b4a;
+    font-weight: normal;
+    padding: 40px 0 0 0;
+}
+.sample-wrapper .sampleBox .sample-ftit {
+    margin:0 auto;
+    /*background: violet;*/
+    font-size: 20px;
+    font-size: 2rem;
+    color: #008b4a;
+    font-weight: normal;
+    padding: 0 0 35px 0;
+}
+.sample-wrapper .sampleBox .sample-list1 {
+    width: 100%;
+    height: 200px;
+    /*background: orange;*/
+}
+.sample-wrapper .sample-list1 li {
+    float: left;
+    width: 25%;
+    max-width: 350px;
+    height: inherit;
+    text-align: center;
+}
+.sample-wrapper .sample-list1 li img {
+    /*设置个宽高*/
+}
+.sample-wrapper .sample-list1 li p {
+    margin-top: 25px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+.sample-wrapper .sampleBox .sample-list2 {
+    width: 100%;
+    height: 200px;
+    /*background: violet;*/
+}
+.sample-wrapper .sample-list2 li {
+    float: left;
+    width: 25%;
+    max-width: 350px;
+    height: inherit;
+    text-align: center;
+}
+.sample-wrapper .sample-list2 li p {
+    margin-top: 25px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+/*section sample end*/
+/*section client start*/
+.client-wrapper {
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    /*background: yellow;*/
+}
+.client-wrapper .clientBox {
+    max-width: 1400px;
+    height: inherit;
+    /*background: pink;*/
+    margin: 0 auto;
+    text-align: center;
+}
+.client-wrapper .clientBox .client-tit {
+    margin:0 auto;
+    /*background: orange;*/
+    font-size: 35px;
+    font-size: 3.5rem;
+    color: #008b4a;
+    font-weight: normal;
+    padding: 40px 0 0 0;
+}
+.client-wrapper .clientBox .client-ftit {
+    margin:0 auto;
+    /*background: violet;*/
+    font-size: 20px;
+    font-size: 2rem;
+    color: #008b4a;
+    font-weight: normal;
+    padding: 0 0 35px 0;
+}
+.client-wrapper .clientBox .client-list1 {
+    width: 100%;
+    height: 125px;
+    /*background: orange;*/
+}
+.client-wrapper .client-list1 li {
+    float: left;
+    width: 25%;
+    max-width: 350px;
+    height: inherit;
+    text-align: center;
+}
+.client-wrapper .client-list1 li img {
+    width: 55px;
+    height: 55px;
+}
+.client-wrapper .client-list1 li p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+.client-wrapper .clientBox .client-list2 {
+    width: 100%;
+    height: 105px;
+    /*background: violet;*/
+    padding-top: 20px;
+}
+.client-wrapper .client-list2 li {
+    float: left;
+    width: 25%;
+    max-width: 350px;
+    height: inherit;
+    text-align: center;
+}
+.client-wrapper .client-list2 li img {
+    width: 55px;
+    height: 55px;
+}
+.client-wrapper .client-list2 li p {
+    margin-top: 20px;
+    font-size: 16px;
+    font-size: 1.6rem;
+}
+/*section client end*/
+/*footer start*/
+footer {
+    width: 100%;
+    height: 260px;
+    background: #ddd;
+}
+footer .footerBox {
+    max-width: 1400px;
+    height: inherit;
+    /*background: orange;*/
+    margin: 0 auto;
+}
+footer .footerBox ul {
+    float: left;
+    width: 33.3%;
+    max-width: 466px;
+    height: inherit;
+    /*background: yellow;*/
+    text-align: center;
+}
+footer .product .product-tit {
+    font-size: 25px;
+    font-size: 2.5rem;
+    margin: 40px 0 35px;
+}
+footer .product .product-item {
+    margin: 0 0 5px 0;
+}
+footer .info .info-tit {
+    font-size: 25px;
+    font-size: 2.5rem;
+    margin: 40px 0 35px;
+}
+footer .info .info-item {
+    margin: 0 0 5px 0;
+}
+footer .contact .contact-tit {
+    font-size: 25px;
+    font-size: 2.5rem;
+    margin: 40px 0 35px;
+}
+footer .contact .contact-item {
+    margin: 0 0 5px 0;
+}
+/*footer end*/
