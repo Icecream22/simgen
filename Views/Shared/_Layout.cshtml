@@ -7,7 +7,7 @@
 	<meta name="description" content="@ViewBag.Desc">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>@ViewBag.Title</title>
-	<link href="@ViewBag.Url/content/style.css?v=1.6.9" rel="stylesheet">
+	<link href="@ViewBag.Url/content/style.css?v=1.8.1" rel="stylesheet">
 	<link rel="shortcut icon" href="@ViewBag.Url/content/img/favicon.ico">
 	<link rel="Bookmark" href="@ViewBag.Url/content/img/favicon.ico" >
 	<link rel="apple-touch-icon" href="@ViewBag.Url/content/img/apple-ico.png">
@@ -16,19 +16,19 @@
 	<div class="wrapper">
     <header>
         <div class="top-logo-row-wrapper">
-                <div class="top-logo-row">
+                <div class="top-logo-row clearfix">
                     <div class="logo-wrapper">
                         <a href="@ViewBag.Url" class="site-logo-link">
                             <img src="@ViewBag.Url/content/img/simgenlogo.png" alt="杭州新景生物有限公司,LOGO" class="site-logo"/>
                         </a>
                     </div>
-                    <form class="top-search-wrapper">
+                    @*<form class="top-search-wrapper">
                         <input type="text" placholder="搜索" />
-                    </form>
+                    </form>*@
                 </div> 
         </div>
         <div class="header-upper-tabs">
-            <nav id="nav" class="doc-set-nav">
+            <nav id="nav" class="doc-set-nav clearfix">
                   <ul class="doc-set-nav-tab-list clearfix">
                     <li class="doc-set-nav-tab-container doc-set-nav-tab-home"><a href="" class="doc-set-nav-tab">首页</a></li>
                     <li class="doc-set-nav-tab-container"><a href="" class="doc-set-nav-tab">产品</a></li>
