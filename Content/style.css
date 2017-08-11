@@ -27,15 +27,13 @@ html {
 body {
     background: #f2f2f2;
     font-family: "Roboto,sans-serif";
-    height:1500px;/*to delete*/
+    height:auto;/*to delete*/
 }
 /*header begin*/
 header{
 	width: 100%;
-	height: 136px;/*to think*/
+	height: 136px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
-    /*background: #ddd;*/
-    /*box-sizing: border-box;*/
 }
 header .top-logo-row-wrapper {
     width: inherit;
@@ -47,8 +45,8 @@ header .top-logo-row-wrapper .top-logo-row {
     height: inherit;
     margin: 0 auto;
     /*background: yellow;*/
-    /*padding: 0 24px;
-    max-width: 1352px;*/
+    /*padding: 0 24px;*/
+    /*max-width: 1352px;*/
     max-width: 1400px;
 }
 header .top-logo-row .logo-wrapper {
@@ -80,18 +78,31 @@ header .header-upper-tabs .doc-set-nav {
     height: inherit;
     margin: 0 auto;
     /*background: orange;*/
-    /*padding: 0 24px;
-    max-width: 1352px;*/
+    /*padding: 0 24px;*/
+    /*max-width: 1352px;*/
+    width: inherit;
     max-width: 1400px;
 }
+@media (max-width: 650px) { /*50*/
+    header .header-upper-tabs .doc-set-nav {
+        text-align: center;
+    }
+}
+
 header .doc-set-nav-tab-list {
+    display: block;
     float: left;
     height: inherit;
     /*background: pink;*/
-    /*min-width: 1028px;*//*可以设置最小宽度，在响应式布局里面@media后改代码巴拉巴拉*/
+    /*min-width: 1028px; 可以设置最小宽度，在响应式布局里面@media后改代码巴拉巴拉*/
     font-size: 14px;
     font-size: 1.4rem;
     
+}
+@media (max-width: 650px) { /*50*/ 
+    header .doc-set-nav-tab-list{
+        display: none;
+    }
 }
 header .doc-set-nav-tab-list .doc-set-nav-tab-container {
     float: left;
@@ -109,10 +120,7 @@ header .doc-set-nav-tab-container .doc-set-nav-tab {
 header .doc-set-nav-tab-container .doc-set-nav-tab:hover {
     color: #000;
 }
-header .free-trail-wrapper {  
-    display: inline-block;
-    float: right;
-}
+
 header .free-trail-button {
     float: right;
     display: inline-block;
@@ -123,10 +131,17 @@ header .free-trail-button {
     color: #fff;
     margin: 7px 0;
 }
-header .free-trail-button:hover {
+/*header .free-trail-button:hover {
     box-shadow: 0 0 4px #041, 0 4px 8px #041;
     margin: 2px 0 4px;
+}*/
+@media (max-width: 650px) { /*50*/
+    header .free-trail-button { /*此处注意层级关系*/
+        float: none;
+        padding: 10px 50px;
+    }
 }
+
 /*header end*/
 /*section 轮播图start*/
 #carousel-wrapper{
@@ -160,6 +175,7 @@ header .free-trail-button:hover {
     background: url("/content/img/banner-dna-4.jpg") no-repeat center; /*alipay.jpeg*/
     background-size: cover;/*两步骤能够实现背景图片在窗口缩小时只显示中间部分*/
     /*background-size: 100% 100%;*/
+    text-align: center;
 }
 #carousel-wrapper .carousel-list-wrapper #carousel-list li.on{
     opacity: 1;
@@ -167,22 +183,27 @@ header .free-trail-button:hover {
 }
 #carousel-wrapper #carousel-list li h2 {
     position: relative;
-    margin: 3% 35% 0;
+    margin: 40px 0 25px;
     font-size: 37px;
     font-size: 3.7rem;
     letter-spacing: 5px;
 }
-#carousel-wrapper #carousel-list li p {
+#carousel-wrapper #carousel-list li p {  /*等具体文字出来后还要继续修改*/
+    width: 25%;
     position: relative;
-    margin: 3% 40% 0;
+    margin: 0 auto 30px;
     font-size: 20px;
     font-size: 2rem;
     /*letter-spacing: .03em;*/
     letter-spacing: .06rem;
-    line-height: 25px;
+    line-height: 30px;
+    height: auto;
+    max-height: 170px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /*white-space: nowrap;*/
 }
 #carousel-wrapper #carousel-list li a{
-    position: absolute;
     display: inline-block;
     padding: 12px 15px 12px 15px;
     text-decoration: none;
@@ -192,12 +213,10 @@ header .free-trail-button:hover {
     border: 1px solid #fff;
 }
 #carousel-wrapper #carousel-list li #learnMore {
-    top: 80%;
-    left: 40%;
+    margin-right: 50px;
 }
 #carousel-wrapper #carousel-list li #useFree {
-    top: 80%;
-    left: 50%;
+
 }
 #carousel-wrapper .carousel-list-wrapper #carousel-list li img{
     width: 100%;
@@ -234,8 +253,8 @@ header .free-trail-button:hover {
 }
 /*section 轮播图end*/
 
-/*section newsBanner-wrapper begin*/
-.notice-wrapper {
+/*section notice-wrapper begin*/
+/*.notice-wrapper {
     width:100%;
     height:77px;
     background: pink;
@@ -246,7 +265,7 @@ header .free-trail-button:hover {
     margin: 0 auto;
     /*padding: 0 24px;
     max-width: 1352px;*/
-    max-width: 1400px;
+/*    max-width: 1400px;
     background:  yellow;
 }
 .notice-wrapper .notice-tit {
@@ -266,12 +285,12 @@ header .free-trail-button:hover {
     float: left;
     /*max-width: 1300px;
     width: 1300px;*/
-    width: 92%;
+/*    width: 92%;
     height: 24px;
     margin: 25px 0;
     background: green;
     /*应该加个最小宽度,防止他掉下去，暂时未加*/
-}
+/*}
 .notice-wrapper .notice-list .notice-item {
     float:left;
     max-width: 280px;
@@ -295,6 +314,7 @@ header .free-trail-button:hover {
 }
 .notice-wrapper .notice-item-a span {
     color: #9A9A9A;
+
 }
 .notice-wrapper .notice-item .new{
     position: relative;
@@ -316,7 +336,7 @@ header .free-trail-button:hover {
     padding: 1px 3px 3px;
 }
 .notice-wrapper .notice-list .notice-item-more {/*阿西吧有问题再说*/
-    float: right;
+/*    float: right;
     font-size: 14px;
     font-size: 1.4rem;
     height: inherit;
@@ -327,11 +347,96 @@ header .free-trail-button:hover {
     color: #9A9A9A;
     background: violet;
     height: inherit;
+}*/
+
+
+.notice-wrapper {/*要做出来与cloud.google相同*/
+    width:100%;
+    height:77px;
+    background: pink;
 }
-/*/*section newsBanner-wrapper end*/
+.notice-wrapper  .noticeBox {
+    display: flex;
+    max-width: 1400px;
+    height: inherit;
+    max-height: 77px;
+    background: yellow;
+    margin: 0 auto;
+    flex-direction: row;
+    align-items: center;
+}
+.notice-wrapper .noticeBox .notice-tit {
+    max-height: 77px;
+    padding: 4px 6px;
+    background: #fa991b;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font: 1.4rem;
+    border-radius: 2px;
+    margin-right: 20px;
+    min-width: 64px;
+}
+
+.notice-wrapper .notice-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    max-width: 1304px;
+    width: 100%;/*加了这个才能正常占满剩余空间*/
+    overflow: hidden;/*为了不影响后续才弄得*/
+}
+.notice-wrapper .notice-list .notice-item {
+    margin-right: 25px;
+}
+
+.notice-wrapper .notice-item .notice-item-a {
+    display: inline-block;
+    font-size: 14px;
+    font: 1.4rem;
+    max-width: 240px;
+    color: #1A1A1A;
+    /*background: orange;*/
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    height: inherit;
+    font-size: 14px;
+    font-size: 1.4rem; 
+    
+}
+.notice-wrapper .notice-item-a span {
+    color: #9A9A9A;
+}
+.notice-wrapper .notice-item .new{
+    display: inline-block;
+    -ms-transform: scale(.8, .8);
+    -webkit-transform: scale(.8, .8);
+    transform: scale(.8, .8);
+    -webkit-transform-origin: top left;
+    -ms-transform-origin: top left;
+    transform-origin: top left;
+    color: #fff;
+    font-size: 10px;
+    font-size: 1rem;
+    background-color: #e04646;
+    border-radius: 2px;
+    line-height: 1;
+    padding: 1px 3px 3px;
+}
+.notice-wrapper .notice-list .notice-item-more {
+    margin-left: auto;
+}
+.notice-wrapper .notice-item-more .notice-item-amore {
+    font-size: 14px;
+    font: 1.4rem;
+    color: #1A1A1A;
+}
+/*section notice-wrapper end*/
 
 /*section character start*/
-#character-wrapper {
+/*#character-wrapper {
     position: relative;
     width: 100%;
     height: 200px;
@@ -345,7 +450,7 @@ header .free-trail-button:hover {
     width: inherit;
     height: inherit;  
     /*background: orange;*/
-}
+/*}
 #character-wrapper ul li {
     position: relative;
     float: left;
@@ -355,7 +460,7 @@ header .free-trail-button:hover {
     font-size: 1rem;
     width: 185px;
     height: 198px;/*2px 的边框*/
-    padding: 0 20px;
+    /*padding: 0 20px;
     margin-right: 125px;
 }
 #character-wrapper ul .charaLast {
@@ -385,11 +490,19 @@ header .free-trail-button:hover {
 }
 
 /*section character end*/
+
+
 /*section advantage start*/
 .advantage-wrapper {
     width: 100%;
-    height: 377px;
-    /*background: violet;*/
+    /*min-height: 377px;/*为了下面不被影响
+    background: violet;*/
+    height:380px;
+}
+@media (max-width: 920px) {
+    .advantage-wrapper {
+        height: auto;
+    }
 }
 .advantage-wrapper .advantageBox {
     max-width: 1400px;
@@ -407,23 +520,37 @@ header .free-trail-button:hover {
     font-weight: normal;
     padding: 40px 0;
 }
+
 .advantage-wrapper .adv-list {
     width: 100%;
     max-width: 1400px;
-    /*background: yellow;*/
     height: 250px;
+    /*background: yellow;*/
+    /*min-height: 250px;*/
+}
+@media (max-width: 920px) {
+    .advantage-wrapper .adv-list {
+        height: 1000px;/*现在程序必须得自己计算出来响应式以后的高度，有啥更好的解决办法???*/
+    }
 }
 .advantage-wrapper .adv-list .adv-item {
     float: left;
-    max-width: 350px;
+    /*max-width: 350px;*/
     width: 25%;
     /*background: pink;*/
-    height: inherit;
+    height: 250px;
     text-align: center;
+}
+@media (max-width: 920px) {
+    .advantage-wrapper .adv-list .adv-item {
+        /*background: violet;*/
+        width: 100%;
+    }
 }
 .advantage-wrapper .adv-item img{
     width: 120px;
     height: 120px;
+    border: 1px solid #008b4a;
 }
 .advantage-wrapper .adv-item h6 {
     margin: 30px 0;
@@ -439,7 +566,12 @@ header .free-trail-button:hover {
     width: 100%;
     height: 550px;
     background: #fff;
-    /*background: yellow;*/
+    background: pink;/**/
+}
+@media (max-width: 920px) {
+    .sample-wrapper {
+        height: auto;
+    }
 }
 .sample-wrapper .sampleBox {
     max-width: 1400px;
@@ -471,12 +603,22 @@ header .free-trail-button:hover {
     height: 200px;
     /*background: orange;*/
 }
+@media (max-width:920px){
+    .sample-wrapper .sampleBox .sample-list1 {
+        height: 800px;
+    }
+}
 .sample-wrapper .sample-list1 li {
     float: left;
     width: 25%;
-    max-width: 350px;
-    height: inherit;
+    /*max-width: 350px;*/
+    height: 200px;
     text-align: center;
+}
+@media (max-width:920px){
+    .sample-wrapper .sample-list1 li {
+        width: 100%;
+    }
 }
 .sample-wrapper .sample-list1 li img {
     /*设置个宽高*/
@@ -492,12 +634,22 @@ header .free-trail-button:hover {
     height: 200px;
     /*background: violet;*/
 }
+@media (max-width:920px){
+    .sample-wrapper .sampleBox .sample-list2 {
+        height: 800px;
+    }
+}
 .sample-wrapper .sample-list2 li {
     float: left;
     width: 25%;
-    max-width: 350px;
-    height: inherit;
+    /*max-width: 350px;*/
+    height: 200px;
     text-align: center;
+}
+@media (max-width:920px) {
+    .sample-wrapper .sample-list2 li {
+        width: 100%;
+    }
 }
 .sample-wrapper .sample-list2 li p {
     margin-top: 25px;
@@ -509,9 +661,15 @@ header .free-trail-button:hover {
 /*section client start*/
 .client-wrapper {
     width: 100%;
-    height: 400px;
+    height: 410px;
     background: #fff;
     /*background: yellow;*/
+}
+@media (max-width:380px) {
+    .client-wrapper {
+       height: 440px;
+       /*background: green;*/
+    }
 }
 .client-wrapper .clientBox {
     max-width: 1400px;
@@ -543,13 +701,15 @@ header .free-trail-button:hover {
     height: 125px;
     /*background: orange;*/
 }
+
 .client-wrapper .client-list1 li {
     float: left;
     width: 25%;
-    max-width: 350px;
-    height: inherit;
+    /*max-width: 350px;*/
+    height: 125px;
     text-align: center;
 }
+
 .client-wrapper .client-list1 li img {
     width: 55px;
     height: 55px;
@@ -558,6 +718,12 @@ header .free-trail-button:hover {
     margin-top: 20px;
     font-size: 16px;
     font-size: 1.6rem;
+}
+@media (max-width:600px) {
+    .client-wrapper .client-list1 li p {
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
 }
 .client-wrapper .clientBox .client-list2 {
     width: 100%;
@@ -581,11 +747,17 @@ header .free-trail-button:hover {
     font-size: 16px;
     font-size: 1.6rem;
 }
+@media (max-width:600px) {
+    .client-wrapper .client-list2 li p {
+        font-size: 14px;
+        font-size: 1.4rem;
+    }
+}
 /*section client end*/
 /*footer start*/
 footer {
     width: 100%;
-    height: 260px;
+    height: 270px;
     background: #ddd;
 }
 footer .footerBox {
@@ -608,7 +780,7 @@ footer .product .product-tit {
     margin: 40px 0 35px;
 }
 footer .product .product-item {
-    margin: 0 0 5px 0;
+    margin: 0 0 10px 0;
 }
 footer .info .info-tit {
     font-size: 25px;
@@ -616,7 +788,7 @@ footer .info .info-tit {
     margin: 40px 0 35px;
 }
 footer .info .info-item {
-    margin: 0 0 5px 0;
+    margin: 0 0 3px 0;
 }
 footer .contact .contact-tit {
     font-size: 25px;
