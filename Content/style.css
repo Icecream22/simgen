@@ -25,15 +25,24 @@ html {
     font-size: 62.5%;/*10 ÷ 16 × 100% = 62.5%*/
 }
 body {
-    background: #f2f2f2;
+    /*background: #f2f2f2;*/
     font-family: "Roboto,sans-serif";
     height:auto;/*to delete*/
 }
 /*header begin*/
 header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 	width: 100%;
 	height: 136px;
 	box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+}
+@media (max-width: 830px) { /*search part*/
+    header{
+        height: auto;
+    }
 }
 header .top-logo-row-wrapper {
     width: inherit;
@@ -49,28 +58,79 @@ header .top-logo-row-wrapper .top-logo-row {
     /*max-width: 1352px;*/
     max-width: 1400px;
 }
+header .top-logo-row .top-hide-tabs{
+    display: none;
+    float: left;
+    background: #fff;
+    border: 0 none;
+    outline: 0;
+    margin: 28px 10px 0 0;
+    cursor: pointer;
+}
+@media (max-width: 650px) {
+    header .top-logo-row .top-hide-tabs {
+        display: block;
+    } 
+}
 header .top-logo-row .logo-wrapper {
     width: 155px;
     float: left;
     height: 36px;
-    margin: 24px 0;
+    margin: 24px 0 24px 20px;/*为了导航页有下划线效果添加的左侧20px以便与首页这个字对齐*/
     /*background: green;*/
         
 }
-header .top-search-wrapper {   /*待补充*/
+header .top-search-wrapper {   
     float: right;
     display: inline-block;
-    width: 200px;
-    height: 36px;
-    background: #f7f7f7;
-    margin: 24px 0;
-    padding: 8px 8px 8px 72px;
-    margin: 15px 0 15px 24px;
+    background: #f7f7f7 url("img/search.png") no-repeat;
+    background-size:  28px 28px;
+    background-position: 20px 6px;
+    padding: 13px 8px 13px 72px;
+    margin: 20px 0 0 24px;
+    border-radius: 5px;
 }
-
+/*@media (max-width: 830px){
+    header .top-search-wrapper {  
+        display: block; 
+        background: pink;
+    }
+}*/
+header .top-search-wrapper  input{
+    border: 0 none;
+    outline: 0;
+    /*width: 120px;*/
+    height: 15px;
+    font-size: 14px;
+    font-size: 1.4rem;
+    color: #bab1ba;
+    vertical-align: middle;
+    background: #f7f7f7;
+    transition: width 400ms ease;
+}
+/*header .top-search-wrapper  input:focus{
+    width: 550px;
+}
+@media (max-width: 830px) {
+    header .top-search-wrapper  input:focus{
+    width: 220px;
+}
+}*/
+header .top-search-wrapper  input::-webkit-input-placeholder { /* WebKit browsers */
+    color:#bab1ba;
+}
+header .top-search-wrapper  input::-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color:#bab1ba;
+}
+header .top-search-wrapper  input::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color:#bab1ba;
+}
+header .top-search-wrapper  input::-ms-input-placeholder { /* Internet Explorer 10+ */
+    color:#bab1ba;
+}
 header .header-upper-tabs {
     width: inherit;
-    height: 48px;
+    height: 49px;/*为了让标题栏border显示，增加盒子高度*/
     background: #f2f2f2;
 }
 header .header-upper-tabs .doc-set-nav {
@@ -78,10 +138,11 @@ header .header-upper-tabs .doc-set-nav {
     height: inherit;
     margin: 0 auto;
     /*background: orange;*/
-    /*padding: 0 24px;*/
-    /*max-width: 1352px;*/
+    /*padding: 0 0 0 20px;*/
+    /*max-width: 1380px;*/
     width: inherit;
     max-width: 1400px;
+    
 }
 @media (max-width: 650px) { /*50*/
     header .header-upper-tabs .doc-set-nav {
@@ -107,18 +168,22 @@ header .doc-set-nav-tab-list {
 header .doc-set-nav-tab-list .doc-set-nav-tab-container {
     float: left;
     padding: 0 20px;
-    height: inherit;
+    height: 48px;
     line-height: 48px;
 }
-header .doc-set-nav-tab-list .doc-set-nav-tab-home {
-    padding: 0 20px 0 0;
-}    
+header .doc-set-nav-tab-list .doc-set-nav-tab-border {
+    border-bottom: 2px solid #008b4a;/*为了让他显示，标题栏高度得减小border的厚度*/
+}
+/*header .doc-set-nav-tab-list .doc-set-nav-tab-home {
+    padding: 0 20px;
+}*/    
 header .doc-set-nav-tab-container .doc-set-nav-tab {
     color: rgba(0,0,0,.54);
-
+    
 }
 header .doc-set-nav-tab-container .doc-set-nav-tab:hover {
-    color: #000;
+    /*color: #000;*/
+    color: #008b4a;
 }
 
 header .free-trail-button {
@@ -129,22 +194,72 @@ header .free-trail-button {
     cursor: pointer;
     background: #008b4a;
     color: #fff;
-    margin: 7px 0;
+    margin: 7px 0 7px 0;
 }
-/*header .free-trail-button:hover {
+
+header .free-trail-button:hover {
     box-shadow: 0 0 4px #041, 0 4px 8px #041;
     margin: 2px 0 4px;
-}*/
-@media (max-width: 650px) { /*50*/
+}
+@media (max-width: 650px) { /*必须放在hover后面才行愉快的动*/
     header .free-trail-button { /*此处注意层级关系*/
         float: none;
         padding: 10px 50px;
     }
 }
-
 /*header end*/
+
+/*header-hidden-mask start*/
+.header-hidden-mask {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: #212121;
+    cursor: pointer;
+    opacity: .5;
+    z-index: 10011;
+}
+/*header-hidden-mask end*/
+
+/*header-hidden-nav-wrapper start*/
+.header-hidden-nav-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 0 4px rgba(0,0,0,.14), 0 4px 8px rgba(0,0,0,.28);
+    height: 100%;
+    width: 256px;
+    outline: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 10012;
+}
+.header-hidden-nav-wrapper .header-hidden-nav-li {
+    width: cal(100%-48px);
+    line-height: 53px;
+    font-size: 16px;
+    font-size: 1.6rem;
+    padding: 0 24px;
+    border-bottom: 1px solid #cfd8dc;
+    font-weight: 600;
+    font-family: "宋体";
+} 
+.header-hidden-nav-wrapper .header-hidden-nav-li:hover a{
+    color: #008b4a;
+}
+.header-hidden-nav-wrapper .header-hidden-nav-li  a{
+    color: #bab1ba;
+}
+/*header-hidden-nav-wrapper end*/
+
+
+
 /*section 轮播图start*/
 #carousel-wrapper{
+    margin-top:135px;/*为了与header的fixed一起*/
     width: 100%;
     height: 400px;
     /*background: orange;*/
@@ -188,6 +303,12 @@ header .free-trail-button {
     font-size: 3.7rem;
     letter-spacing: 5px;
 }
+@media (max-width: 520px) {
+    #carousel-wrapper #carousel-list li h2 {
+        font-size: 20px;
+        font-size: 2rem;
+    }
+}
 #carousel-wrapper #carousel-list li p {  /*等具体文字出来后还要继续修改*/
     width: 25%;
     position: relative;
@@ -198,11 +319,20 @@ header .free-trail-button {
     letter-spacing: .06rem;
     line-height: 30px;
     height: auto;
-    max-height: 170px;
+    max-height: 180px;
     overflow: hidden;
-    text-overflow: ellipsis;
-    /*white-space: nowrap;*/
+    /*text-overflow: ellipsis;
+    white-space: nowrap;*/
 }
+@media (max-width: 520px){
+    #carousel-wrapper #carousel-list li p {
+        width: 40%;
+        font-size: 15px;
+        font-size: 1.5rem;
+    }
+}
+
+
 #carousel-wrapper #carousel-list li a{
     display: inline-block;
     padding: 12px 15px 12px 15px;
@@ -353,22 +483,22 @@ header .free-trail-button {
 .notice-wrapper {/*要做出来与cloud.google相同*/
     width:100%;
     height:77px;
-    background: pink;
+    background: #f2f2f2;
 }
 .notice-wrapper  .noticeBox {
     display: flex;
     max-width: 1400px;
     height: inherit;
     max-height: 77px;
-    background: yellow;
     margin: 0 auto;
     flex-direction: row;
     align-items: center;
+    
 }
 .notice-wrapper .noticeBox .notice-tit {
     max-height: 77px;
     padding: 4px 6px;
-    background: #fa991b;
+    background: #008b4a;
     color: #fff;
     text-align: center;
     font-size: 14px;
@@ -386,9 +516,15 @@ header .free-trail-button {
     max-width: 1304px;
     width: 100%;/*加了这个才能正常占满剩余空间*/
     overflow: hidden;/*为了不影响后续才弄得*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    background: yellow;
 }
 .notice-wrapper .notice-list .notice-item {
     margin-right: 25px;
+    overflow: hidden;/*这三行似乎形成了相对好的效果*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 .notice-wrapper .notice-item .notice-item-a {
@@ -424,14 +560,20 @@ header .free-trail-button {
     border-radius: 2px;
     line-height: 1;
     padding: 1px 3px 3px;
+
+    position: relative;
+    top: -5px;
 }
 .notice-wrapper .notice-list .notice-item-more {
     margin-left: auto;
+    overflow: hidden;/*这三行似乎形成了相对好的效果*/
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .notice-wrapper .notice-item-more .notice-item-amore {
     font-size: 14px;
     font: 1.4rem;
-    color: #1A1A1A;
+    color: #bab1ba;
 }
 /*section notice-wrapper end*/
 
@@ -495,9 +637,9 @@ header .free-trail-button {
 /*section advantage start*/
 .advantage-wrapper {
     width: 100%;
-    /*min-height: 377px;/*为了下面不被影响
-    background: violet;*/
-    height:380px;
+    /*min-height: 377px;/*为了下面不被影响*/
+    background: #fff;
+    height:400px;
 }
 @media (max-width: 920px) {
     .advantage-wrapper {
@@ -566,7 +708,7 @@ header .free-trail-button {
     width: 100%;
     height: 550px;
     background: #fff;
-    background: pink;/**/
+    /*background: pink;*/
 }
 @media (max-width: 920px) {
     .sample-wrapper {
@@ -799,3 +941,157 @@ footer .contact .contact-item {
     margin: 0 0 5px 0;
 }
 /*footer end*/
+
+/*product-select-wrapper  产品选择页 start*/
+.product-select-wrapper {
+    width: 100%;
+    margin-top: 55px;
+    margin-top:135px;
+    background: #f2f2f2;
+}
+.product-select-wrapper .product-selectBox{
+    /*max-width: 1380px;
+    padding-left: 20px;*/
+    max-width: 1400px;
+    margin: auto;
+}
+.flex-hover-card-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    display: flex;
+    clear: both;
+    min-height: 92px;
+}
+.flex-hover-card {
+    box-shadow: none;
+    flex: initial;
+    margin: 8px;
+    padding: 0;
+    /*width: 284px;*/
+    width: 300px;
+    box-sizing: border-box;
+    background: #fff;
+    border-radius: 2px;
+    cursor: pointer;
+    letter-spacing: .01em;
+    position: relative;
+    transition: all .3s;
+}
+.flex-hover-card img {
+        max-width: 100%;
+    }
+.flex-hover-card .inner {
+    color: #4a5960;
+    min-height: 286px;
+    padding: 40px 28px 0;
+}
+.flex-hover-card h3 {
+   color: #4a5960;
+   font-size: 20px;
+   font-weight: 400;
+   line-height: 24px;
+   font: 400 20px/32px Roboto,sans-serif;
+   margin: 20px 0;
+}
+.flex-hover-card p {
+    margin: 16px 0;
+    padding: 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 26px;
+}
+.flex-hover-card span {
+    border-top: 1px solid #e4e4e4;
+    display: block;
+    padding: 16px 28px;
+    color: #039be5;
+}
+.text-uppercase {
+    text-transform: uppercase;
+} 
+/*product-select-wrapper  产品选择页 end*/
+
+/*product-species-wrapper 产品详情页 start*/
+.product-species-wrapper {
+    width: 100%;
+    height: auto;
+    margin-top:137px;
+    background: #f2f2f2;
+}
+.product-species-wrapper .product-speciesBox {
+    max-width: 1400px;
+    margin: 0 auto;
+    font-size: 14px;
+    background: yellow;
+    position: relative;
+}
+.product-species-wrapper .product-speciesBox .leftside-container {
+    /*position: absolute;
+    top: 135px;
+    float: left;*/
+    /*position: fixed;
+    top: 135px;
+    width: 230px;
+    height: 100%;*/
+
+    background: #fff;
+    box-shadow: 2px 0 2px #bababa;
+    line-height: 1.6em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 238px;
+}
+
+.product-species-wrapper .leftside-container .nav-product-species-container {
+    /*overflow: auto;
+    position: fixed;*/
+    /*min-width: 230px;
+    width: 230px;
+    background: red;*/
+    overflow: auto;/**/
+    position: fixed;
+    /*box-sizing: border-box;
+    min-width: 230px;
+    width: 230px;*/
+    background: #fff;
+    height: 900px;/*max-height: 580px;*/
+}
+.product-species-wrapper .nav-product-species {
+    /*width: inherit;*/
+    
+}
+.product-species-wrapper .nav-product-species span {
+    display: block;
+    /*background: #008b4a;*/
+    background: #6dcb77;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    padding-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+.product-species-wrapper .nav-product-species  ul {
+    padding: 20px;
+}
+.product-species-wrapper .nav-product-species  ul li {
+    font-size: 14px;
+    line-height: 25px;
+}
+.product-species-wrapper .nav-product-species  ul li a{
+    color: rgba(0,0,0,.54);
+}
+.product-species-wrapper .nav-product-species  ul li:hover a{
+    color: #008b4a;
+}
+.product-species-wrapper .content-container {
+    float: left;
+    width: 100%;
+    max-width: 1170px;
+    background: pink;
+}     
+    
+
+/*product-species-wrapper 产品详情页 end*/
