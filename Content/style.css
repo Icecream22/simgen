@@ -1,6 +1,4 @@
-﻿
-
-/*通用 begin*/
+﻿/*通用 begin*/
 * {
 	padding: 0;
 	margin: 0;
@@ -518,7 +516,7 @@ header .free-trail-button:hover {
     overflow: hidden;/*为了不影响后续才弄得*/
     text-overflow: ellipsis;
     white-space: nowrap;
-    background: yellow;
+    /*background: yellow;*/
 }
 .notice-wrapper .notice-list .notice-item {
     margin-right: 25px;
@@ -988,6 +986,7 @@ footer .contact .contact-item {
 .flex-hover-card h3 {
    color: #4a5960;
    font-size: 20px;
+   font-size: 2rem;
    font-weight: 400;
    line-height: 24px;
    font: 400 20px/32px Roboto,sans-serif;
@@ -1014,16 +1013,18 @@ footer .contact .contact-item {
 /*product-species-wrapper 产品详情页 start*/
 .product-species-wrapper {
     width: 100%;
-    height: auto;
     margin-top:137px;
+    height: 1000px;/*给个高度有背景*/
     background: #f2f2f2;
 }
 .product-species-wrapper .product-speciesBox {
     max-width: 1400px;
+    width: inherit;
     margin: 0 auto;
     font-size: 14px;
-    background: yellow;
+    font-size: 1.4rem;
     position: relative;
+    background: #f2f2f2;
 }
 .product-species-wrapper .product-speciesBox .leftside-container {
     /*position: absolute;
@@ -1041,7 +1042,7 @@ footer .contact .contact-item {
     top: 0;
     bottom: 0;
     z-index: 1;
-    width: 238px;
+    max-width: 238px;
 }
 
 .product-species-wrapper .leftside-container .nav-product-species-container {
@@ -1056,7 +1057,7 @@ footer .contact .contact-item {
     min-width: 230px;
     width: 230px;*/
     background: #fff;
-    height: 900px;/*max-height: 580px;*/
+    /*height: 900px;max-height: 580px;*/
 }
 .product-species-wrapper .nav-product-species {
     /*width: inherit;*/
@@ -1065,33 +1066,125 @@ footer .contact .contact-item {
 .product-species-wrapper .nav-product-species span {
     display: block;
     /*background: #008b4a;*/
-    background: #6dcb77;
+    background: #008b4a;
     height: 35px;
     line-height: 35px;
     color: #fff;
     padding-left: 20px;
     font-size: 14px;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 .product-species-wrapper .nav-product-species  ul {
     padding: 20px;
 }
+
 .product-species-wrapper .nav-product-species  ul li {
     font-size: 14px;
+    font-size: 1.4rem;
     line-height: 25px;
 }
 .product-species-wrapper .nav-product-species  ul li a{
     color: rgba(0,0,0,.54);
 }
+
 .product-species-wrapper .nav-product-species  ul li:hover a{
     color: #008b4a;
 }
 .product-species-wrapper .content-container {
+    background: #fff;
+    position: absolute;
+    right: 0;
+    padding: 0 30px;
+} 
+.product-species-wrapper .content-container .content-tit {
+    height: 90px;
+    font-size: 25px;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #000;
+    line-height: 110px;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+.product-species-wrapper .content-container .content-tit span {
+     font-size: 14px;
+     font-size: 1.4rem;
+     padding: 1px 8px;
+     background: #008b4a;
+     border-radius: 5px;
+     color: #fff;
+     margin-left: 20px;
+}
+.product-species-wrapper .content-container .content-series {
+    margin: 10px 0;
+    font-size: 14px;
+    font-size: 1.4rem;
+}
+.product-species-wrapper .content-container .content-series .content-series-a{
+    display: inline-block;
     float: left;
+    font-size: 14px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+    width: 160px;
+    line-height: 28px;
+    text-align: center;
+    background: #008b4a;
+    border-radius: 3px;
+    color: #fff;
+    margin-right: 10px;
+}
+.product-species-wrapper .content-container .content-series .content-series-a:hover {
+    text-decoration: underline;
+}
+.product-species-wrapper .content-container .content-series  .content-series-qq-wrapper {
+    display: inline-block;
+    float: left;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.product-species-wrapper .content-container .content-series  .content-series-number {
+    float: right;
+    margin-top: 2px;
+}
+.product-species-wrapper .content-container .content-size {
     width: 100%;
-    max-width: 1170px;
-    background: pink;
-}     
-    
+    margin-bottom: 25px;
+}
+.product-species-wrapper .content-container .content-size table {
+    width: 100%;
+    text-align: center;
+}
+.product-species-wrapper .content-container .content-size table tr td:nth-child(1){
+    width: 80%;
+}
+.product-species-wrapper .content-container .content-size table tr td:nth-child(2){
+
+}
+.product-species-wrapper .content-container .content-description {
+    width: 100%;
+    padding: 10px 8px;
+    background-color: #fffdef;
+    border: 1px solid #f9e7b6;
+    margin-bottom: 25px;
+}
+.product-species-wrapper .content-container .content-description .content-description-left {
+    float: left;
+    display: inline-block;
+}
+.product-species-wrapper .content-container .content-description .content-description-left p {
+    margin-bottom: 5px;
+}
+.product-species-wrapper .content-container .content-description img {
+    float:right;
+}
+
+
+
+
 
 /*product-species-wrapper 产品详情页 end*/
+
+
