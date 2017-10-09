@@ -720,7 +720,7 @@ header .free-trail-button:hover {
     margin: 0 auto;
     text-align: center;
 }
-    .sample-wrapper .sampleBox .sample-tit {
+.sample-wrapper .sampleBox .sample-tit {
         margin: 0 auto;
         /*background: orange;*/
         font-size: 35px;
@@ -894,11 +894,98 @@ header .free-trail-button:hover {
     }
 }
 /*section client end*/
+
+/*section trend start*/
+.trend-wrapper {
+    width: 100%;
+    height: 410px;
+    background: #F7F7F7;   
+}
+.trend-wrapper .trendBox {
+    max-width: 1400px;
+    height: inherit;
+    margin: 0 auto;
+}
+.trend-wrapper .trendBox > h1 {
+    text-align: center;
+    font-size: 35px;
+    font-size: 3.5rem;
+    color: #008b4a;
+    font-weight: normal;
+    padding-top: 40px;
+}
+
+.trend-wrapper .trendBox .trend-content-wrapper {
+    width: 100%;
+    height: 280px;
+    margin-top: 20px;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-colomn {
+    float: left;
+    /*max-width: 350px;*/
+    height: 280px;
+    line-height: 28px;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-colomn h3{
+    text-align: left;
+    margin-bottom: 25px;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-aboutSimgen {
+    width: 27%;
+
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-aboutSimgen div {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-news {
+    width: 41%;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-news div {
+    width: 66%;
+    margin: auto;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-news div ul {
+    width: 100%;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-news div ul li {
+    width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-news div ul li a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-salesPromotion {
+    width: 32%;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-salesPromotion ul {
+    width: 100%;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-salesPromotion ul li {
+    width: inherit;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.trend-wrapper .trendBox .trend-content-wrapper .trend-salesPromotion ul li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+/*section trend end*/
+
+
 /*footer start*/
 footer {
     width: 100%;
     height: 270px;
+    /*background: #f2f2f2;*/
     background: #ddd;
+     /*background: #fff;*/
 }
 footer .footerBox {
     max-width: 1400px;
@@ -1035,6 +1122,15 @@ footer .contact .contact-item {
     width: 230px;
     height: 100%;*/
 
+    /*background: #fff;
+    box-shadow: 2px 0 2px #bababa;
+    line-height: 1.6em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    max-width: 238px;让content-container的宽度自动变化*/
+
     background: #fff;
     box-shadow: 2px 0 2px #bababa;
     line-height: 1.6em;
@@ -1042,7 +1138,7 @@ footer .contact .contact-item {
     top: 0;
     bottom: 0;
     z-index: 1;
-    max-width: 238px;
+    width: 238px;
 }
 
 .product-species-wrapper .leftside-container .nav-product-species-container {
@@ -1092,11 +1188,16 @@ footer .contact .contact-item {
     color: #008b4a;
 }
 .product-species-wrapper .content-container {  /*让content-container的宽度自动变化*/
-  background: #fff;
+    /*background: #fff;
     position: absolute;
     right:0;
     padding: 0 30px;
-    max-width: 1144px;
+    max-width: 1144px;让content-container的宽度自动变化*/
+
+    background: #fff;
+    position: absolute;
+    left: 270px;
+    width: 1145px;
 }
 .product-species-wrapper .content-container .content-tit {
     height: 90px;
@@ -1166,7 +1267,7 @@ footer .contact .contact-item {
 }
 .product-species-wrapper .content-container .content-description {
     width: 100%;
-    padding: 10px 8px;
+    padding: 10px 0;
     background-color: #fffdef;
     border: 1px solid #f9e7b6;
     margin-bottom: 25px;
