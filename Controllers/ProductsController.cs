@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Text;
+using System.IO;
 
 namespace simgenfrontend.Controllers
 {
@@ -22,9 +24,29 @@ namespace simgenfrontend.Controllers
         public ActionResult Details()   /*为什么是Details(int id)，有问题，把其内容删除*/
         {
             return View ();
-        }
 
-       
+        }
+        //public ContentResult TestPost()
+        //{
+            
+        //    StreamReader sw = new StreamReader(@"e:\iotext.txt", Encoding.UTF8);
+        //    return Content("<div>" + sw + "</div>");
+        //    sw.Close();
+            
+        //}
+        //static void Main(string[] args)
+        //{
+        //    using (FileStream fs = new FileStream(@"D:\sql.txt", FileMode.Open, FileAccess.Read))
+        //    {
+        //        StreamReader sr = new StreamReader(fs);
+        //        string line1 = sr.ReadLine();
+        //        Console.WriteLine(line1);       //输出 111111111111
+        //    }
+
+        //    Console.ReadKey();
+        //}
+
+
 
         //public ActionResult Create()
         //{
