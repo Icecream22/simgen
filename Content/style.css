@@ -560,7 +560,7 @@ header .free-trail-button:hover {
     padding: 1px 3px 3px;
 
     position: relative;
-    top: -5px;
+    top: -8px;
 }
 .notice-wrapper .notice-list .notice-item-more {
     margin-left: auto;
@@ -1091,12 +1091,13 @@ footer .contact .contact-item {
 .product-species-wrapper .nav-product-species  ul li:hover a{
     color: #008b4a;
 }
-.product-species-wrapper .content-container {
-    background: #fff;
+.product-species-wrapper .content-container {  /*让content-container的宽度自动变化*/
+  background: #fff;
     position: absolute;
-    right: 0;
+    right:0;
     padding: 0 30px;
-} 
+    max-width: 1144px;
+}
 .product-species-wrapper .content-container .content-tit {
     height: 90px;
     font-size: 25px;
