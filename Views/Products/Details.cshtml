@@ -121,29 +121,14 @@
                 </div>
                 <img src="@ViewBag.Url/content/img/pro-test.jpg" alt="产品" width="150" height="100"/>
             </div>
-            <div class="content-detaildescription">
-                如<br />
-                何<br />
-                获<br />
-                取<br />
-                word<br />
-                内<br />
-                容<br />
-                在<br />
-                这<br />
-                1<br />1<br />1<br />
-                1<br />
-                1<br />1<br />1<br />
-                1<br />
-                1<br />
-                1<br />1<br />
-                1<br />
-                1<br />
+            <div class="content-detaildescription" style="width:100px;height:100px;background:#ddd;">
+                
             </div>
         </div>
     </div>
 </section>
 <script>
+    $(document).ready(function () { 
     $("#nav-home").click(function () {
         $("#nav ul li").removeClass("doc-set-nav-tab-border");
         $("#nav-home").addClass("doc-set-nav-tab-border");
@@ -177,15 +162,15 @@
         $("#nav ul li").removeClass("doc-set-nav-tab-border");
         $("#nav-product").addClass("doc-set-nav-tab-border");/*继续加这玩意才能有下划线显示*/
         
-        /*content内容*/     
-        var proWidth = $(".product-speciesBox").width();
-        var barWidth = $("#nav-product-species-container").width();
-        $(".content-container").css({ "width": (proWidth - barWidth - 10 - 60 ) });
-        $(window).resize(function () {
-            proWidth = $(".product-speciesBox").width();
-            barWidth = $("#nav-product-species-container").width();
-            $(".content-container").css({ "width": (proWidth - barWidth - 10 - 60 ) });
-        });
+        /*content内容,这样才是根据浏览器变化宽度*/     
+        //var proWidth = $(".product-speciesBox").width();
+        //var barWidth = $("#nav-product-species-container").width();
+        //$(".content-container").css({ "width": (proWidth - barWidth - 10 - 60 ) });
+        //$(window).resize(function () {
+        //    proWidth = $(".product-speciesBox").width();
+        //    barWidth = $("#nav-product-species-container").width();
+        //    $(".content-container").css({ "width": (proWidth - barWidth - 10 - 60 ) });
+        //});
 
         ///*窗口小于700px*/
         //var winWid = $(window).width();
@@ -199,4 +184,12 @@
         //        $(".product-species-wrapper .nav-product-species  ul li").css({"max-width":(winWid*0.34)});
         //   }
         //});
+        $(".content-detaildescription").click(function () {
+            $.get("/products/TestPost",
+                function (data) {
+                    
+                });
+            alert("I can't read the message from Microsoft Word documents.");
+        });
+    });
 </script>
