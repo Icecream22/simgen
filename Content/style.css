@@ -1282,6 +1282,11 @@ footer .contact .contact-item {
 .product-species-wrapper .content-container .content-description img {
     float:right;
 }
+.product-species-wrapper .content-container .content-detaildescription {
+    font-size: 14px;
+    font-size: 1.4rem;
+    line-height: 25px;
+}
 
 
 
