@@ -364,6 +364,7 @@ header .free-trail-button:hover {
     /*background: #ddd;*/
     left: 50%;
     margin-left: -32px;
+    margin-bottom: 24px;
 }
 #carousel-wrapper .tab ul li{  
     list-style: none;
@@ -371,8 +372,8 @@ header .free-trail-button:hover {
     width: 14px;
     height: 14px;
     line-height: 14px;
-    background: #bbb;
-    margin-right: 2px;
+    background: #DDDDDD;
+    margin-right: 7px;
     border-radius: 100%;
     cursor: pointer;
 }
