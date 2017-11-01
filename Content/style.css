@@ -296,7 +296,7 @@ header .free-trail-button:hover {
 }
 #carousel-wrapper #carousel-list li h2 {
     position: relative;
-    margin: 40px 0 25px;
+    margin: 55px 0 30px;
     font-size: 37px;
     font-size: 3.7rem;
     letter-spacing: 5px;
@@ -307,15 +307,15 @@ header .free-trail-button:hover {
         font-size: 2rem;
     }
 }
-#carousel-wrapper #carousel-list li p {  /*等具体文字出来后还要继续修改*/
-    width: 25%;
+#carousel-wrapper #carousel-list li p { /*等具体文字出来后还要继续修改*/
+    /*width: 25%;*/
     position: relative;
     margin: 0 auto 30px;
     font-size: 20px;
     font-size: 2rem;
     /*letter-spacing: .03em;*/
     letter-spacing: .06rem;
-    line-height: 30px;
+    line-height: 40px;
     height: auto;
     max-height: 180px;
     overflow: hidden;
@@ -333,7 +333,7 @@ header .free-trail-button:hover {
 
 #carousel-wrapper #carousel-list li a{
     display: inline-block;
-    padding: 12px 15px 12px 15px;
+    padding: 8px 15px 8px 15px;
     text-decoration: none;
     font-size: 14px;
     font-size: 1.4rem;
@@ -356,7 +356,7 @@ header .free-trail-button:hover {
     max-width: 1400px;
     height: 20px;
     margin: 0 auto;
-    bottom: 4%;
+    bottom: 6%;
 }
 #carousel-wrapper .tab ul {  /*神奇般的实现了功能*/
     position: absolute;
