@@ -9,3 +9,9 @@ Desktop.ini
 *.sln
 *.mdb
 *.config
+*/.DS_Store
+*/.dll
+*/.csproj
+*/.sln
+*/*.mdb
+

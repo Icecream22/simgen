@@ -1,0 +1,5 @@
+D:\Projectes\Simgen-net-mvc\SimgenWebSite\SimgenWebSite\bin\SimgenWetSiteDAL.dll
+D:\Projectes\Simgen-net-mvc\SimgenWebSite\SimgenWebSite\bin\SimgenWetSiteDAL.pdb
+D:\Projectes\Simgen-net-mvc\SimgenWebSite\SimgenWetSiteDAL\obj\Debug\ResolveAssemblyReference.cache
+D:\Projectes\Simgen-net-mvc\SimgenWebSite\SimgenWetSiteDAL\obj\Debug\SimgenWetSiteDAL.dll
+D:\Projectes\Simgen-net-mvc\SimgenWebSite\SimgenWetSiteDAL\obj\Debug\SimgenWetSiteDAL.pdb

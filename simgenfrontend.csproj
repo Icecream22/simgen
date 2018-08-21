@@ -91,6 +91,9 @@
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\..\wwwsimgencn\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
+    <Reference Include="FluentData">
+      <HintPath>packages\FluentData.3.0.1.0\lib\FluentData.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -116,12 +119,19 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Content\style.css" />
+    <Content Include="Views\Home\ShowAd.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Products\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Products\Select.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="SimgenWetSiteDAL\SimgenWebSiteDAL.csproj">
+      <Project>{337354B4-97D1-45BC-B72C-46F892BE878B}</Project>
+      <Name>SimgenWebSiteDAL</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

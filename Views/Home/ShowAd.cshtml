@@ -1,0 +1,56 @@
+﻿@using SimgenWebSiteDAL.Models;
+@model System.Collections.Generic.List<SimgenWebSiteDAL.Models.AdSlider>
+@if(Model !=null && Model.Count >0)
+{
+<section id="carousel-wrapper">
+    <div class="carousel-list-wrapper">
+        <ul id="carousel-list" class="clearfix">
+            @{
+            var i = 1;
+            var fisrtSlidON = "on";
+
+                foreach (var item in Model) {
+                      <li class="carousel-li @(fisrtSlidON) slide-@(i)">
+                        <h2>核酸纯化领域技术领先者</h2>
+                        <p>只专注于核酸纯化领域研究<br/>独家创新技术<br />超简便/高性能/高性价比</p>
+                        <div>
+                            <a id="learnMore" href="">了解更多</a>
+                            <a id="useFree" href="">免费试用</a>
+                        </div>
+                    </li>
+                  i++;
+                 }
+                }
+            <!--li class="carousel-li slide-2">
+                 <h2>全血DNA提取产品</h2>
+                <p>15分钟完成DNA提取<br />无需蛋白酶K消化/无需事先去除红细胞<br />最大支持400μl样本量</p>
+                <div>
+                    <a id="learnMore" href="">了解更多</a>
+                    <a id="useFree" href="">免费试用</a>
+                </div>
+            </li>
+            <li class="carousel-li slide-3">
+                <h2>唾液DNA提取产品</h2>
+                <p>国内唯一支持大样本量提取<br />基因检测产品配套首选<br />独家技术唾液采集器DNA保存液</p>
+                <a id="learnMore" href="">3了解更多</a>
+                <a id="useFree" href="">3免费试用</a>
+            </li>
+            <li class="carousel-li slide-4">
+                <h2>游离核酸提取产品</h2>
+                <p>国内唯一支持400ml样本量提取<br />产前筛查/癌症治疗效果评估配套产品首选<br />高性价比</p>
+                <a id="learnMore" href="">4了解更多</a>
+                <a id="useFree" href="">4免费试用</a>
+            </li-->
+        </ul>
+    </div>
+    <div class="tab">
+        <ul id="carousel-btn">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+</section>
+}
+

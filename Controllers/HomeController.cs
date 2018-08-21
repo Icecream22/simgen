@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using SimgenWebSiteDAL.DAL;
+using SimgenWebSiteDAL.Models;
 
 namespace simgenfrontend.Controllers
 {
@@ -18,7 +20,16 @@ namespace simgenfrontend.Controllers
 			ViewData["Runtime"] = isMono ? "Mono" : ".NET";
 
 			ViewBag.Url = Config.URL;
+
 			return View();
 		}
+
+        public ActionResult ShowAd()
+        {
+           
+            AdSliderDAL adSliderDAL = new AdSliderDAL();
+            List<AdSlider> ads = adSliderDAL.GetAdSlider();
+            return PartialView(ads);
+        }
 	}
 }
